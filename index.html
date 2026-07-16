@@ -3,6 +3,7 @@
 
 <head>
     <meta name="google-site-verification" content="Zy26sVHqGsVihPNt9AhhdQSf7JMUUpFJBqFTtTEDBuo" />
+
     <title>Pixora</title>
 
     <style>
@@ -41,15 +42,16 @@
             width: 100%;
             border-radius: 15px;
         }
-#cautare {
-    display: block;
-    margin: 20px auto;
-    width: 80%;
-    padding: 12px;
-    border-radius: 20px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-}
+
+        #cautare {
+            display: block;
+            margin: 20px auto;
+            width: 80%;
+            padding: 12px;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
     </style>
 
 </head>
@@ -64,7 +66,9 @@
 </div>
 
 <h1>Pixora</h1>
+
 <input type="text" id="cautare" placeholder="Caută imagini...">
+
 <div class="galerie">
 
     <img src="https://picsum.photos/300/400">
@@ -75,6 +79,7 @@
     <img src="https://picsum.photos/300/380">
 
 </div>
+
 <script>
 let cautare = document.getElementById("cautare");
 
@@ -83,14 +88,11 @@ cautare.onkeyup = function() {
     let imagini = document.querySelectorAll(".galerie img");
 
     imagini.forEach(function(img) {
-        if (text == "") {
-            img.style.display = "block";
-        } else {
-            img.style.display = "none";
-        }
+        img.style.display = "block";
     });
 }
 </script>
+
 </body>
 
 </html>
