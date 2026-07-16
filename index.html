@@ -2,7 +2,11 @@
 <html>
 
 <head>
+
     <meta name="google-site-verification" content="Zy26sVHqGsVihPNt9AhhdQSf7JMUUpFJBqFTtTEDBuo" />
+
+    <!-- Iconita din tab -->
+    <link rel="icon" type="image/png" href="logo.png">
 
     <title>Pixora</title>
 
@@ -31,6 +35,14 @@
             text-align: center;
         }
 
+        .logo {
+            width: 90px;
+            height: 90px;
+            display: block;
+            margin: 20px auto 5px;
+            border-radius: 20px;
+        }
+
         .galerie {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -52,6 +64,7 @@
             border: 1px solid #ccc;
             font-size: 16px;
         }
+
     </style>
 
 </head>
@@ -65,9 +78,14 @@
     <a href="profil.html">Profil</a>
 </div>
 
+
+<img src="logo.png" class="logo">
+
 <h1>Pixora</h1>
 
+
 <input type="text" id="cautare" placeholder="Caută imagini...">
+
 
 <div class="galerie">
 
@@ -80,18 +98,26 @@
 
 </div>
 
+
 <script>
+
 let cautare = document.getElementById("cautare");
 
 cautare.onkeyup = function() {
+
     let text = cautare.value.toLowerCase();
     let imagini = document.querySelectorAll(".galerie img");
 
     imagini.forEach(function(img) {
+
         img.style.display = "block";
+
     });
+
 }
+
 </script>
+
 
 </body>
 
