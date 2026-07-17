@@ -5,9 +5,15 @@
 
 <meta name="google-site-verification" content="Zy26sVHqGsVihPNt9AhhdQSf7JMUUpFJBqFTtTEDBuo">
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4990811750293516"
+crossorigin="anonymous"></script>
+
 <link rel="icon" type="image/png" href="logo.png">
 
-<title>Pixora</title>
+<title>Pixora - Imagini și Categorii</title>
+
+<meta name="description" content="Pixora este o galerie de imagini cu natură, mașini, animale și artă. Explorează imagini interesante.">
+
 
 <style>
 
@@ -18,71 +24,57 @@ body {
 }
 
 
-/* MENIU NOU */
-
 .meniu {
     background: white;
-    padding: 12px 25px;
+    padding: 15px 25px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    box-shadow: 0 3px 10px #ddd;
-    position: sticky;
-    top: 0;
-    z-index: 10;
+    align-items: center;
+    box-shadow: 0 3px 10px #ccc;
 }
+
 
 .brand {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 22px;
+    font-size: 24px;
     font-weight: bold;
 }
 
+
 .brand img {
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
 }
 
-.linkuri {
-    display: flex;
-    gap: 25px;
-}
 
-.linkuri a {
+.meniu a {
     text-decoration: none;
     color: black;
     font-weight: bold;
-}
-
-.linkuri a:hover {
-    color: #777;
+    margin-left: 20px;
 }
 
 
-/* LOGO */
+h1 {
+    text-align: center;
+    margin: 30px;
+}
+
 
 .logo {
-    width: 90px;
-    height: 90px;
+    width: 100px;
+    height: 100px;
     display: block;
-    margin: 25px auto 5px;
+    margin: 25px auto;
     border-radius: 20px;
 }
 
 
-/* TITLU */
-
-h1 {
-    text-align: center;
-}
-
-
-/* CAUTARE */
-
 #cautare {
+
     display: block;
     margin: 20px auto;
     width: 80%;
@@ -90,25 +82,44 @@ h1 {
     border-radius: 20px;
     border: 1px solid #ccc;
     font-size: 16px;
+
 }
 
 
-/* GALERIE */
 
 .galerie {
 
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    padding: 20px;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    padding: 25px;
 
 }
 
 
-.galerie img {
+
+.card {
+
+    overflow: hidden;
+    border-radius: 20px;
+
+}
+
+
+.card img {
 
     width: 100%;
-    border-radius: 15px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: 0.5s;
+
+}
+
+
+.card img:hover {
+
+    transform: scale(1.12);
 
 }
 
@@ -133,14 +144,11 @@ h1 {
 </div>
 
 
-<div class="linkuri">
+<div>
 
 <a href="index.html">Acasă</a>
-
 <a href="exploreaza.html">Explorează</a>
-
 <a href="categorii.html">Categorii</a>
-
 <a href="profil.html">Profil</a>
 
 </div>
@@ -153,28 +161,44 @@ h1 {
 <img src="logo.png" class="logo">
 
 
-<h1>Pixora</h1>
+<h1>Pixora 📸</h1>
 
 
-
-<input type="text" id="cautare" placeholder="Caută imagini...">
+<input id="cautare" placeholder="Caută imagini...">
 
 
 
 <div class="galerie">
 
 
-<img src="https://picsum.photos/300/400">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+</div>
 
-<img src="https://picsum.photos/300/350">
 
-<img src="https://picsum.photos/300/450">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1555215695-3004980ad54e">
+</div>
 
-<img src="https://picsum.photos/300/300">
 
-<img src="https://picsum.photos/300/500">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131">
+</div>
 
-<img src="https://picsum.photos/300/380">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1549490349-8643362247b5">
+</div>
+
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7">
+</div>
+
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1456926631375-92c8ce872def">
+</div>
 
 
 </div>
@@ -185,22 +209,26 @@ h1 {
 
 let cautare = document.getElementById("cautare");
 
-
-cautare.onkeyup = function() {
+cautare.onkeyup = function(){
 
 let text = cautare.value.toLowerCase();
 
 let imagini = document.querySelectorAll(".galerie img");
 
 
-imagini.forEach(function(img) {
+imagini.forEach(function(img){
 
-img.style.display = "block";
+if(text==""){
+img.style.display="block";
+}
+else{
+img.style.display="none";
+}
 
 });
 
-}
 
+}
 
 </script>
 
