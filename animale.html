@@ -2,48 +2,181 @@
 <html>
 
 <head>
-    <title>Animale - Pixora</title>
 
-    <style>
-        body {
-            font-family: Arial;
-            background: #f5f5f5;
-            margin: 0;
-        }
+<title>Animale - Pixora</title>
 
-        h1 {
-            text-align: center;
-        }
+<link rel="icon" type="image/png" href="logo.png">
 
-        .galerie {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-            padding: 20px;
-        }
+<style>
 
-        img {
-            width: 100%;
-            border-radius: 15px;
-        }
-    </style>
+body {
+    font-family: Arial;
+    background: #f5f5f5;
+    margin: 0;
+}
+
+
+/* MENIU */
+
+.meniu {
+    background: white;
+    padding: 12px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 3px 10px #ccc;
+}
+
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+.brand img {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+
+.linkuri {
+    display: flex;
+    gap: 25px;
+}
+
+
+.linkuri a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+
+
+/* TITLU */
+
+h1 {
+    text-align: center;
+    margin: 30px;
+}
+
+
+
+/* GALERIE */
+
+.galerie {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 25px;
+
+}
+
+
+.card {
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+
+.card img {
+
+    width: 100%;
+    display: block;
+    border-radius: 20px;
+    transition: 0.5s;
+
+}
+
+
+.card img:hover {
+
+    transform: scale(1.12);
+    box-shadow: 0 10px 25px #999;
+
+}
+
+
+</style>
 
 </head>
 
+
 <body>
-<a href="index.html">🏠 Înapoi Acasă</a>
-<h1>🐱 Animale</h1>
+
+
+<div class="meniu">
+
+
+<div class="brand">
+
+<img src="logo.png">
+
+<span>Pixora</span>
+
+</div>
+
+
+<div class="linkuri">
+
+<a href="index.html">Acasă</a>
+<a href="exploreaza.html">Explorează</a>
+<a href="categorii.html">Categorii</a>
+<a href="profil.html">Profil</a>
+
+</div>
+
+
+</div>
+
+
+
+<h1>🐾 Animale</h1>
+
+
 
 <div class="galerie">
 
-<img src="https://picsum.photos/300/400">
-<img src="https://picsum.photos/300/350">
-<img src="https://picsum.photos/300/450">
-<img src="https://picsum.photos/300/300">
-<img src="https://picsum.photos/300/500">
-<img src="https://picsum.photos/300/380">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d">
+</div>
+
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131">
+</div>
+
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1552053831-71594a27632d">
+</div>
+
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1456926631375-92c8ce872def">
+</div>
+
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1549366021-9f761d450615">
+</div>
+
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1507146426996-ef05306b995a">
+</div>
+
 
 </div>
+
+
 
 </body>
 
