@@ -2,48 +2,183 @@
 <html>
 
 <head>
-    <title>Masini - Pixora</title>
 
-    <style>
-        body {
-            font-family: Arial;
-            background: #f5f5f5;
-            margin: 0;
-        }
+<title>Mașini - Pixora</title>
 
-        h1 {
-            text-align: center;
-        }
+<link rel="icon" type="image/png" href="logo.png">
 
-        .galerie {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-            padding: 20px;
-        }
+<style>
 
-        img {
-            width: 100%;
-            border-radius: 15px;
-        }
-    </style>
+body {
+    font-family: Arial;
+    background: #f5f5f5;
+    margin: 0;
+}
+
+
+/* MENIU */
+
+.meniu {
+    background: white;
+    padding: 12px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 3px 10px #ccc;
+}
+
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+.brand img {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+
+.linkuri {
+    display: flex;
+    gap: 25px;
+}
+
+
+.linkuri a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+
+
+/* TITLU */
+
+h1 {
+    text-align: center;
+    margin: 30px;
+}
+
+
+
+/* GALERIE */
+
+.galerie {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 25px;
+
+}
+
+
+.card {
+
+    overflow: hidden;
+    border-radius: 20px;
+
+}
+
+
+.card img {
+
+    width: 100%;
+    display: block;
+    border-radius: 20px;
+    transition: 0.5s;
+
+}
+
+
+.card img:hover {
+
+    transform: scale(1.12);
+    box-shadow: 0 10px 25px #999;
+
+}
+
+
+</style>
 
 </head>
 
+
 <body>
-<a href="index.html">🏠 Înapoi Acasă</a>
+
+
+<div class="meniu">
+
+
+<div class="brand">
+
+<img src="logo.png">
+
+<span>Pixora</span>
+
+</div>
+
+
+<div class="linkuri">
+
+<a href="index.html">Acasă</a>
+<a href="exploreaza.html">Explorează</a>
+<a href="categorii.html">Categorii</a>
+<a href="profil.html">Profil</a>
+
+</div>
+
+
+</div>
+
+
+
 <h1>🚗 Mașini</h1>
+
+
 
 <div class="galerie">
 
-<img src="https://picsum.photos/300/400">
-<img src="https://picsum.photos/300/350">
-<img src="https://picsum.photos/300/450">
-<img src="https://picsum.photos/300/300">
-<img src="https://picsum.photos/300/500">
-<img src="https://picsum.photos/300/380">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70">
+</div>
+
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7">
+</div>
+
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1542362567-b07e54358753">
+</div>
+
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1504215680853-026ed2a45def">
+</div>
+
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1542282088-fe8426682b8b">
+</div>
+
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d">
+</div>
+
 
 </div>
+
+
 
 </body>
 
