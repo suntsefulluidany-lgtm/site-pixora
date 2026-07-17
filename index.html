@@ -10,9 +10,9 @@ crossorigin="anonymous"></script>
 
 <link rel="icon" type="image/png" href="logo.png">
 
-<title>Pixora - Imagini și Categorii</title>
+<title>Pixora</title>
 
-<meta name="description" content="Pixora este o galerie de imagini cu natură, mașini, animale și artă. Explorează imagini interesante.">
+<meta name="description" content="Pixora - descoperă imagini cu natură, mașini, animale și artă.">
 
 
 <style>
@@ -26,11 +26,18 @@ body {
 
 .meniu {
     background: white;
-    padding: 15px 25px;
+    padding: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 3px 10px #ccc;
+}
+
+
+.logo-mic {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
 }
 
 
@@ -43,24 +50,11 @@ body {
 }
 
 
-.brand img {
-    width: 45px;
-    height: 45px;
-    border-radius: 12px;
-}
-
-
 .meniu a {
     text-decoration: none;
     color: black;
     font-weight: bold;
     margin-left: 20px;
-}
-
-
-h1 {
-    text-align: center;
-    margin: 30px;
 }
 
 
@@ -73,16 +67,8 @@ h1 {
 }
 
 
-#cautare {
-
-    display: block;
-    margin: 20px auto;
-    width: 80%;
-    padding: 12px;
-    border-radius: 20px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-
+h1 {
+    text-align: center;
 }
 
 
@@ -97,12 +83,9 @@ h1 {
 }
 
 
-
 .card {
-
     overflow: hidden;
     border-radius: 20px;
-
 }
 
 
@@ -137,7 +120,7 @@ h1 {
 
 <div class="brand">
 
-<img src="logo.png">
+<img src="logo.png" class="logo-mic">
 
 <span>Pixora</span>
 
@@ -161,10 +144,7 @@ h1 {
 <img src="logo.png" class="logo">
 
 
-<h1>Pixora 📸</h1>
-
-
-<input id="cautare" placeholder="Caută imagini...">
+<h1>📸 Pixora</h1>
 
 
 
@@ -202,36 +182,6 @@ h1 {
 
 
 </div>
-
-
-
-<script>
-
-let cautare = document.getElementById("cautare");
-
-cautare.onkeyup = function(){
-
-let text = cautare.value.toLowerCase();
-
-let imagini = document.querySelectorAll(".galerie img");
-
-
-imagini.forEach(function(img){
-
-if(text==""){
-img.style.display="block";
-}
-else{
-img.style.display="none";
-}
-
-});
-
-
-}
-
-</script>
-
 
 
 </body>
