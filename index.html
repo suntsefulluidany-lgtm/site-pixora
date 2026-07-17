@@ -3,120 +3,207 @@
 
 <head>
 
-    <meta name="google-site-verification" content="Zy26sVHqGsVihPNt9AhhdQSf7JMUUpFJBqFTtTEDBuo" />
+<meta name="google-site-verification" content="Zy26sVHqGsVihPNt9AhhdQSf7JMUUpFJBqFTtTEDBuo">
 
-    <!-- Iconita din tab -->
-    <link rel="icon" type="image/png" href="logo.png">
+<link rel="icon" type="image/png" href="logo.png">
 
-    <title>Pixora</title>
+<title>Pixora</title>
 
-    <style>
-        body {
-            font-family: Arial;
-            background: #f5f5f5;
-            margin: 0;
-        }
+<style>
 
-        .meniu {
-            background: white;
-            padding: 15px;
-            display: flex;
-            justify-content: space-around;
-            box-shadow: 0 2px 5px #ccc;
-        }
+body {
+    font-family: Arial;
+    background: #f5f5f5;
+    margin: 0;
+}
 
-        .meniu a {
-            text-decoration: none;
-            color: black;
-            font-weight: bold;
-        }
 
-        h1 {
-            text-align: center;
-        }
+/* MENIU NOU */
 
-        .logo {
-            width: 90px;
-            height: 90px;
-            display: block;
-            margin: 20px auto 5px;
-            border-radius: 20px;
-        }
+.meniu {
+    background: white;
+    padding: 12px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 3px 10px #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
 
-        .galerie {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-            padding: 20px;
-        }
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+    font-weight: bold;
+}
 
-        .galerie img {
-            width: 100%;
-            border-radius: 15px;
-        }
+.brand img {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+}
 
-        #cautare {
-            display: block;
-            margin: 20px auto;
-            width: 80%;
-            padding: 12px;
-            border-radius: 20px;
-            border: 1px solid #ccc;
-            font-size: 16px;
-        }
+.linkuri {
+    display: flex;
+    gap: 25px;
+}
 
-    </style>
+.linkuri a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.linkuri a:hover {
+    color: #777;
+}
+
+
+/* LOGO */
+
+.logo {
+    width: 90px;
+    height: 90px;
+    display: block;
+    margin: 25px auto 5px;
+    border-radius: 20px;
+}
+
+
+/* TITLU */
+
+h1 {
+    text-align: center;
+}
+
+
+/* CAUTARE */
+
+#cautare {
+    display: block;
+    margin: 20px auto;
+    width: 80%;
+    padding: 12px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+
+/* GALERIE */
+
+.galerie {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 20px;
+
+}
+
+
+.galerie img {
+
+    width: 100%;
+    border-radius: 15px;
+
+}
+
+
+</style>
 
 </head>
 
+
 <body>
 
+
 <div class="meniu">
-    <a href="index.html">Acasă</a>
-    <a href="exploreaza.html">Explorează</a>
-    <a href="categorii.html">Categorii</a>
-    <a href="profil.html">Profil</a>
+
+
+<div class="brand">
+
+<img src="logo.png">
+
+<span>Pixora</span>
+
 </div>
+
+
+<div class="linkuri">
+
+<a href="index.html">Acasă</a>
+
+<a href="exploreaza.html">Explorează</a>
+
+<a href="categorii.html">Categorii</a>
+
+<a href="profil.html">Profil</a>
+
+</div>
+
+
+</div>
+
 
 
 <img src="logo.png" class="logo">
 
+
 <h1>Pixora</h1>
+
 
 
 <input type="text" id="cautare" placeholder="Caută imagini...">
 
 
+
 <div class="galerie">
 
-    <img src="https://picsum.photos/300/400">
-    <img src="https://picsum.photos/300/350">
-    <img src="https://picsum.photos/300/450">
-    <img src="https://picsum.photos/300/300">
-    <img src="https://picsum.photos/300/500">
-    <img src="https://picsum.photos/300/380">
+
+<img src="https://picsum.photos/300/400">
+
+<img src="https://picsum.photos/300/350">
+
+<img src="https://picsum.photos/300/450">
+
+<img src="https://picsum.photos/300/300">
+
+<img src="https://picsum.photos/300/500">
+
+<img src="https://picsum.photos/300/380">
+
 
 </div>
+
 
 
 <script>
 
 let cautare = document.getElementById("cautare");
 
+
 cautare.onkeyup = function() {
 
-    let text = cautare.value.toLowerCase();
-    let imagini = document.querySelectorAll(".galerie img");
+let text = cautare.value.toLowerCase();
 
-    imagini.forEach(function(img) {
+let imagini = document.querySelectorAll(".galerie img");
 
-        img.style.display = "block";
 
-    });
+imagini.forEach(function(img) {
+
+img.style.display = "block";
+
+});
 
 }
 
+
 </script>
+
 
 
 </body>
